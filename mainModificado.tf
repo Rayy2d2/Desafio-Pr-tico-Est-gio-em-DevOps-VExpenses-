@@ -170,12 +170,11 @@ resource "aws_instance" "debian_ec2" {
   }
 
   user_data = <<-EOF
-              #!/bin/bash
+              !/bin/bash
               apt-get update -y
               apt-get upgrade -y
               apt-get install -y nginx
 
-              # Cria um arquivo básico de configuração Nginx
               echo 'server {
                   listen 80;
                   server_name localhost;
@@ -184,7 +183,6 @@ resource "aws_instance" "debian_ec2" {
                   }
               }' > /etc/nginx/sites-available/default
 
-              # Reinicia o Nginx para aplicar a configuração
               systemctl restart nginx
 
               # Configura SSH para aceitar apenas chaves ECDSA
@@ -192,16 +190,12 @@ resource "aws_instance" "debian_ec2" {
               sed -i 's/^HostKey \/etc\/ssh\/ssh_host_rsa_key/#HostKey \/etc\/ssh\/ssh_host_rsa_key/' /etc/ssh/sshd_config
               sed -i 's/^HostKey \/etc\/ssh\/ssh_host_ed25519_key/#HostKey \/etc\/ssh\/ssh_host_ed25519_key/' /etc/ssh/sshd_config
 
-              # Desabilita o acesso root via SSH
               sed -i 's/#PermitRootLogin yes/PermitRootLogin no/' /etc/ssh/sshd_config
 
-              # Configura apenas SSH v2
               echo "Protocol 2" >> /etc/ssh/sshd_config
 
-              # Desabilita autenticação por senha
               sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
 
-              # Reinicia o SSH
               systemctl restart sshd
   EOF
 
