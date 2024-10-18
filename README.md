@@ -1,34 +1,17 @@
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
 
-<!-- PROJECT SHIELDS -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/seu-username/terraform-aws-vpc-ec2">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/seu-username/"Infraestrutura-de-Instância-EC2-com-Terraform">
   </a>
 
-<h3 align="center">Terraform AWS VPC e EC2</h3>
+<h3 align="center">Infraestrutura de Instância EC2 com Terraform</h3>
 
   <p align="center">
-    Um projeto Terraform para provisionar uma VPC e uma instância EC2 na AWS
-    <br />
-    <a href="https://github.com/seu-username/terraform-aws-vpc-ec2"><strong>Explore a documentação »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/seu-username/terraform-aws-vpc-ec2">Ver Demo</a>
-    ·
-    <a href="https://github.com/seu-username/terraform-aws-vpc-ec2/issues">Reportar Bug</a>
-    ·
-    <a href="https://github.com/seu-username/terraform-aws-vpc-ec2/issues">Solicitar Feature</a>
+    Este código Terraform provisiona uma instância EC2 na AWS, configurando uma VPC, subnet, grupo de segurança e uma chave SSH para acessar a instância. 
   </p>
 </div>
 
@@ -42,19 +25,15 @@
         <li><a href="#construído-com">Construído Com</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#começando">Começando</a>
-      <ul>
-        <li><a href="#pré-requisitos">Pré-requisitos</a></li>
-        <li><a href="#instalação">Instalação</a></li>
-      </ul>
-    </li>
-    <li><a href="#uso">Uso</a></li>
+    <li><a href="#configuração-do-provedor">Configuração do Provedor</a></li>
+    <li><a href="#variaveis">Variáveis</a></li>
+    <li><a href="#recursos">Recursos</a></li>
+    <li><a href="#chave-ssh">Chave SSH</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contribuindo">Contribuindo</a></li>
-    <li><a href="#licença">Licença</a></li>
-    <li><a href="#contato">Contato</a></li>
-    <li><a href="#reconhecimentos">Reconhecimentos</a></li>
+    <li><a href="#vpc-e-rede">VPC e Rede</a></li>
+    <li><a href="#grupo-de-segurança">Grupo de Segurança</a></li>
+    <li><a href="#ami-ebian">AMI Debian</a></li>
+    <li><a href="#outputs">Outputs</a></li>
   </ol>
 </details>
 
@@ -75,9 +54,14 @@ Este projeto Terraform cria uma infraestrutura básica na AWS, incluindo uma VPC
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
 <!-- GETTING STARTED -->
-## Começando
+## Configuração do Provedor
+```hcl
+   provider "aws" {
+  region = "us-east-1"
+}
+   ```
 
-Para obter uma cópia local funcionando, siga estas etapas simples.
+O código configura o provedor AWS para usar a região `us-east-1’(abrange o Leste dos EUA (Norte da Virgínia)) para utilizar a instancia EC2.
 
 ### Pré-requisitos
 
