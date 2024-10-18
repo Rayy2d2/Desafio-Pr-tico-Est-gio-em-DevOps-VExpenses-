@@ -280,3 +280,24 @@ output "ec2_public_ip" {
 O código define dois outputs:
 - `private_key`: A chave privada para acessar a instância EC2 (marcada como sensível).
 - `ec2_public_ip`: O endereço IP público da instância EC2.
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/seu-username/terraform-aws-vpc-ec2.svg?style=for-the-badge
+[contributors-url]: https://github.com/seu-username/terraform-aws-vpc-ec2/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/seu-username/terraform-aws-vpc-ec2.svg?style=for-the-badge
+[forks-url]: https://github.com/seu-username/terraform-aws-vpc-ec2/network/members
+[stars-shield]: https://img.shields.io/github/stars/seu-username/terraform-aws-vpc-ec2.svg?style=for-the-badge
+[stars-url]: https://github.com/seu-username/terraform-aws-vpc-ec2/stargazers
+[issues-shield]: https://img.shields.io/github/issues/seu-username/terraform-aws-vpc-ec2.svg?style=for-the-badge
+[issues-url]: https://github.com/seu-username/terraform-aws-vpc-ec2/issues
+[license-shield]: https://img.shields.io/github/license/seu-username/terraform-aws-vpc-ec2.svg?style=for-the-badge
+[license-url]: https://github.com/seu-username/terraform-aws-vpc-ec2/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/seu-linkedin-username
+[product-screenshot]: images/screenshot.png
+[Terraform.io]: https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white
+[Terraform-url]: https://www.terraform.io/
+[AWS.com]: https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white
+[AWS-url]: https://aws.amazon.com/
