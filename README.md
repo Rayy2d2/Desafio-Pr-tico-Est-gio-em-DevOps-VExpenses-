@@ -25,3 +25,7 @@ Este projeto Terraform cria uma infraestrutura básica na AWS, incluindo uma VPC
 4. Execute `terraform apply`
 
 Para instruções detalhadas, consulte [docs/usage.md](docs/usage.md).
+
+● Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
