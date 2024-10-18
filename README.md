@@ -28,7 +28,6 @@
     <li><a href="#configuração-do-provedor">Configuração do Provedor</a></li>
     <li><a href="#variaveis">Variáveis</a></li>
     <li><a href="#chave-ssh">Chave SSH</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#vpc-e-rede">VPC e Rede</a></li>
     <li><a href="#grupo-de-segurança">Grupo de Segurança</a></li>
     <li><a href="#ami-ebian">AMI Debian</a></li>
