@@ -46,7 +46,6 @@ Este projeto Terraform cria uma infraestrutura básica na AWS, incluindo uma VPC
 * [![Terraform][Terraform.io]][Terraform-url]
 * [![AWS][AWS.com]][AWS-url]
 
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
 ## Configuração do Provedor
 ```hcl
@@ -281,6 +280,7 @@ O código define dois outputs:
 - `private_key`: A chave privada para acessar a instância EC2 (marcada como sensível).
 - `ec2_public_ip`: O endereço IP público da instância EC2.
 
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
